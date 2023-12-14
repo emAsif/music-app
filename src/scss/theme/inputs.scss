@@ -1,0 +1,28 @@
+@import "./variables";
+
+.search-input {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid $secondary-color;
+  background-color: #fff;
+  box-shadow:
+    0 0.5px 1.5px $color-3,
+    inset 0 0.8px 0px -0.25px $color-5;
+  font: inherit;
+  color: #181e27;
+  outline: none;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+  font-size: 0.875rem;
+  line-height: 1.45rem;
+  box-sizing: border-box;
+  text-align: left;
+
+  &:hover {
+    //box-shadow: ;
+    border: 1px solid $primary-color;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+}

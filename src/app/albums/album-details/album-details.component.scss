@@ -1,0 +1,42 @@
+@import "src/scss/theme/variables";
+
+a {
+  color: $primary-color;
+}
+
+.info-dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+  }
+}
+
+.child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $small-screen) {
+    width: 50%;
+  }
+}
+
+.trackList {
+  margin-left: 0;
+  @media (min-width: $small-screen) {
+    margin-left: 1em;
+  }
+}
+
+img {
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+@import "./variables";
+//spacer
+$spacer: 1rem;
+$spacer-1: $spacer * 0.5; // 8
+$spacer-2: $spacer; // 16
+$spacer-3: $spacer * 1.75; // 28
+
+//padding
+
+.pl-8 {
+  padding-left: $spacer-1;
+}
+
+.mb-8 {
+  margin-bottom: $spacer-1;
+}
+
+.mt-8 {
+  margin-top: $spacer-1;
+}
+
+.ml-8 {
+  margin-left: $spacer-1;
+}
+
+.mt-32 {
+  margin-top: $spacer-2;
+}
+
+.mb-32 {
+  margin-bottom: $spacer-2;
+}
+
+@media (min-width: $small-screen) {
+  .mt-32 {
+    margin-top: $spacer-3;
+  }
+
+  .mb-32 {
+    margin-bottom: $spacer-3;
+  }
+}

@@ -1,0 +1,72 @@
+@import "src/scss/theme/variables";
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .column {
+    flex: 1;
+    min-width: 100%;
+
+    @media (min-width: $small-screen) {
+      flex: 0 0 calc(31.3333% - 5px);
+      margin: 0.5em 0.5em;
+      min-width: auto;
+    }
+  }
+
+  .mobile-display {
+    display: block;
+
+    @media (min-width: $small-screen) {
+      display: none;
+    }
+  }
+
+  .desktop-display {
+    display: none;
+
+    @media (min-width: $small-screen) {
+      display: block;
+    }
+  }
+}
+
+.card-subContainer {
+  display: flex;
+  flex-direction: column;
+
+  .text-box-height {
+    height: 3em;
+  }
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.button-primary {
+  width: 50%;
+
+  @media (min-width: $small-screen) {
+    width: fit-content;
+  }
+}
+
+.btn-container {
+  display: flex;
+  margin-right: 0;
+  margin-bottom: 0.5em;
+
+  @media (min-width: $small-screen) {
+    margin-right: 3em;
+    margin-bottom: 0;
+  }
+}

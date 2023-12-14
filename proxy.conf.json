@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://itunes.apple.com/search",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

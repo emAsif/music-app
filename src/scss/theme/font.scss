@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src:
+    url("../../scss/theme/fonts/lato/lato-v22-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-regular.woff2")
+      format("woff2"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-regular.woff")
+      format("woff"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-regular.ttf")
+      format("truetype"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-regular.svg#Lato")
+      format("svg");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+  src:
+    url("../../scss/theme/fonts/lato/lato-v22-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-700.woff2") format("woff2"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-700.woff") format("woff"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-700.ttf") format("truetype"),
+    url("../../scss/theme/fonts/lato/lato-v22-latin-700.svg#Lato") format("svg");
+}
+

@@ -1,0 +1,35 @@
+<ng-container
+  *ngIf="(tracks$ | async) as tracks"
+>
+  <ng-container *ngIf='tracks.length; else infoMsg'>
+    <div class="mt-32">
+      <a href="" [routerLink]="[Routes.homepage]"> Go Back to Homepage</a>
+    </div>
+    <div class="parent card mt-32">
+      <div class="child mb-32">
+        <h1 class="pl-8">{{ tracks[0].artistName }}</h1>
+        <h3 class="pl-8">{{ tracks[0].collectionName }}</h3>
+        <img [src]="tracks[0].artworkUrl100" [alt]="tracks[0].collectionName" />
+      </div>
+      <div class="child trackList">
+        <p class="font-bold mb-8 pl-8">
+          Following are the tracks for this Album:
+        </p>
+        <div class="card mb-8" *ngFor="let album of tracks">
+          <p class="pl-8">{{ album.trackName }}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+
+<ng-template #infoMsg>
+  <div class="info-dev">
+    <p class="mb-8 mt-32 color-red"> No tracks exists for the this album. <span>🙁 🙁</span> </p>
+    <p class="mb-8">
+      Try for <span class="font-bold">The Beatles 1967-1970 (The Blue Album)</span> or some other album
+    </p>
+    <a href="" [routerLink]="[Routes.homepage]"> Go Back to Homepage</a>
+  </div>
+</ng-template>

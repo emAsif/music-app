@@ -1,0 +1,98 @@
+@import "./variables";
+
+$font-family-lato:
+  "Lato",
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  roboto,
+  "Helvetica Neue",
+  arial,
+  "Noto Sans",
+  "Liberation Sans",
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji";
+$font-family-base: $font-family-lato;
+$body-color: $primary-color;
+$link-color: $primary-color;
+$link-decoration: underline;
+$link-hover-decoration: underline;
+$font-weight-bold: bold;
+
+//font sizing
+$font-size-base: 0.88em;
+$text-scale-ratio: 1;
+$font-xxl: calc(
+  1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *
+    $text-scale-ratio
+);
+$font-xl: calc(1em * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio);
+$font-l: calc(1em * $text-scale-ratio);
+$font-m: calc(1em / $text-scale-ratio);
+$font-s: $font-size-base * 0.75;
+
+//heading
+$h1-font-size: $font-size-base * 2.75;
+$h2-font-size: $font-size-base * 2;
+
+$h1-font-mobile-size: $font-size-base * 1.625;
+$h2-font-mobile-size: $font-size-base * 1.5;
+
+$headings-font-family: $font-family-lato;
+$headings-font-weight: 700;
+
+$headings-line-height: 1.4;
+$headings-margin-bottom: 0.5em;
+$headings-top-bottom: 0;
+
+$input-font-family: $font-family-lato;
+
+//$line-height: 2;
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-lato;
+  max-width: $medium-screen;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $black;
+  margin-bottom: $headings-margin-bottom;
+  margin-top: $headings-top-bottom;
+  line-height: $headings-line-height;
+}
+
+h1 {
+  font-size: $h1-font-mobile-size;
+}
+
+h2 {
+  font-size: $h2-font-mobile-size;
+}
+
+p {
+  margin: 0;
+}
+
+@media (min-width: $small-screen) {
+  body {
+    font-size: 1em;
+    padding: 0 2em;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+  }
+}

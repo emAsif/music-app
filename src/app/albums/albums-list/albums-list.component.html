@@ -1,0 +1,68 @@
+<div class="row">
+  <h1 class="mb-32 mt-32">Music App</h1>
+</div>
+<div class="filter-container mb-32">
+  <div class="btn-container">
+    <button class="button-primary" (click)="sortAlbums(FilterKeys.Asc)">
+      sort Asc
+    </button>
+    <button class="button-primary" (click)="sortAlbums(FilterKeys.Desc)">
+      sort Desc
+    </button>
+  </div>
+  <div>
+    <input
+      type="text"
+      class="search-input"
+      placeholder="search"
+      (ngModelChange)='filterData()'
+      [(ngModel)]="searchText"
+    />
+  </div>
+</div>
+<div
+  class="row"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="200"
+  (scrolled)="onScrollDown()"
+>
+  <div class="column mb-8" *ngFor="let album of filteredAlbums">
+    <a
+      target="_self"
+      [routerLink]="[Routes.albumsDetails]"
+      [queryParams]="{ id: album.collectionId }"
+      class="card"
+    >
+      <div class="mobile-display">
+        <img
+          [width]="'100'"
+          [height]="'100'"
+          [ngSrc]="album.artworkUrl100"
+          [alt]="album.artistName"
+        />
+      </div>
+      <div class="card-subContainer ml-8">
+        <p class="font-bold mb-8 mt-8 text-box-height">
+          {{
+            album.collectionName.length > 40
+              ? (album.collectionName | slice: 0 : 40) + " ..."
+              : album.collectionName
+          }}
+        </p>
+        <p class="mb-8">{{ album.artistName }}</p>
+        <div class="desktop-display mb-16">
+          <img
+            [width]="'262'"
+            [height]="'262'"
+            [ngSrc]="album.artworkUrl100"
+            [alt]="album.artistName"
+          />
+        </div>
+      </div>
+    </a>
+  </div>
+  <div *ngIf="filteredAlbums.length === 0 && !isLoading">
+    <p class="mt-32 color-red">No Result Found, Please try again.</p>
+  </div>
+</div>
